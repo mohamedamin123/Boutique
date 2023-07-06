@@ -1,0 +1,50 @@
+<main>
+    <div class="container-fluid">
+      <div class="row justify-content-center pt-2">
+        <div class="text-center col">
+          <h1 class="h1">Ajouter un client</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="row justify-content-center p-2">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>formulaire : <span class="font-weight-bold" style="color: rgb(234, 233, 245);">remplir</span></h4>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="productAddForm" (ngSubmit)="onAjouter()">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">nom de produit</label>
+                    <input type="text" class="form-control" id="inputEmail4" value="Avengers: Endgame"  formControlName="nameControl">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">categorie</label>
+                    <input type="text" class="form-control" id="inputPassword4"  formControlName="categorienControl"  >
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputAddress">prix</label>
+                    <input type="number" class="form-control" id="inputAddress" formControlName="prixControl" >
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputAddresss">image</label>
+                    <input type="file" class="" id="inputAddresss"   formControlName="imageControl">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputAddress2">description</label>
+                    <input type="text" class="form-control" id="inputAddress2"  formControlName="descriptionControl" >
+                  </div>
+                </div>
+                <div class="form-row justify-content-center">
+                  <button type="submit" class="btn btn-primary mr-4">ajouter</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

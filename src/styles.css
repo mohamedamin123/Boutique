@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */      
+* {
+    margin-bottom:0px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom:0px;
+}
+body
+{
+    padding:0;
+    background-color:rgb(194, 195, 196);
+}

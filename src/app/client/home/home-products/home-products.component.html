@@ -1,0 +1,22 @@
+<h1 class="titre">{{title}}</h1>
+
+<div class="d-flex flex-row justify-content-between">
+
+    <div class="row card-deck ml-5">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let prod of produits">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h4>{{prod.nom}}</h4>
+                </div>
+                <div class="card-body">
+                    <img class="card-img-top img-prod" [src]="prod.image" alt="image inexistance" (click)="onSelectProd(prod)">
+                    <h5 class="card-title">{{prod.prix}}</h5>
+                    <button *ngIf="prod.description" (click)="onDetail(prod)">Détails</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-home-product-detail [msg]="selectProd" *ngIf="selectProd"></app-home-product-detail>
+
+</div>
